@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/simplemoviedbsearchtool/static/css/main.c2057c69.chunk.css",
+    "main.js": "/simplemoviedbsearchtool/static/js/main.b2f1ed03.chunk.js",
+    "main.js.map": "/simplemoviedbsearchtool/static/js/main.b2f1ed03.chunk.js.map",
+    "runtime-main.js": "/simplemoviedbsearchtool/static/js/runtime-main.20db2d18.js",
+    "runtime-main.js.map": "/simplemoviedbsearchtool/static/js/runtime-main.20db2d18.js.map",
+    "static/js/2.2898c781.chunk.js": "/simplemoviedbsearchtool/static/js/2.2898c781.chunk.js",
+    "static/js/2.2898c781.chunk.js.map": "/simplemoviedbsearchtool/static/js/2.2898c781.chunk.js.map",
+    "index.html": "/simplemoviedbsearchtool/index.html",
+    "precache-manifest.d7ca92ff135ea4be2b9813ecae204fa7.js": "/simplemoviedbsearchtool/precache-manifest.d7ca92ff135ea4be2b9813ecae204fa7.js",
+    "service-worker.js": "/simplemoviedbsearchtool/service-worker.js",
+    "static/css/main.c2057c69.chunk.css.map": "/simplemoviedbsearchtool/static/css/main.c2057c69.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20db2d18.js",
+    "static/js/2.2898c781.chunk.js",
+    "static/css/main.c2057c69.chunk.css",
+    "static/js/main.b2f1ed03.chunk.js"
+  ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="A SIMPLE MOVIE DB SEARCH TOOL using React, Redux, Redux-thunk & CSSTransitionGroup Animations."
+      content="Coded and built with ❤️ by Alvison Hunter"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css"
+      integrity="sha256-/sdxenK1NDowSNuphgwjv8wSosSNZB0t5koXqd7XqOI="
+      crossorigin="anonymous"
+    />
+ <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+      integrity="sha256-QHdJObhDO++VITP6S4tMlDHRWMaUOk+s/xWIRgF/YY0="
+      crossorigin="anonymous"
+    ></script>
+    <title>A SIMPLE MOVIE DB SEARCH TOOL using React.js, Redux and Redux Thunk</title>
+  </head>
+  <style>
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+.fullscreen-bg__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  .fullscreen-bg {
+      background: url('bk.jpg') center center / cover no-repeat;
+  }
+  .fullscreen-bg__video {
+      display: none;
+  }
+}
+
+</style>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="fullscreen-bg">
+  <video loop muted autoplay poster="bk.jpg" class="fullscreen-bg__video">
+      <source src="bk.webm" type="video/webm">
+      <source src="bk.mp4" type="video/mp4">
+      <source src="bk.ogv" type="video/ogg">
+  </video>
+</div>
+    <div id="root"></div>
+
+</body>
+</html>
+  </body>
+</html>
