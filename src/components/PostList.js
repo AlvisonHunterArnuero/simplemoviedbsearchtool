@@ -34,6 +34,33 @@ class PostList extends React.Component {
   }
 
   componentDidMount() {
+    var arrMovies2019 = [
+      "Mission: Impossible – Fallout",
+      "Burning",
+      "Thunder Road",
+      "Zama",
+      "A Prayer Before Dawn",
+      "Love After Love",
+      "You Were Never Really Here",
+      "The Ballad of Buster Scruggs",
+      "24 Frames",
+      "Filmworker",
+      "Shoplifters",
+      "The Endless",
+      "Love After Love",
+      "A Private War",
+      "I Am Not a Witch",
+      "First Reformed",
+      "Mandy",
+      "The Mule",
+      "Annihilation",
+      "Cold War",
+      "Eighth Grade",
+      "Leave No Trace",
+      "Paddington 2",
+      "The Rider"
+    ];
+
     var arrGreatestAllTimes = [
       "The Dark Knight",
       "The Exorcist",
@@ -73,6 +100,13 @@ class PostList extends React.Component {
       "Taxi Driver",
       "Rocky"
     ];
+
+    // Let's declare the variables containing the random movie for each element
+
+    // This will be for the main movie on the top
+    var randMainMovie =
+      arrMovies2019[Math.floor(Math.random() * arrMovies2019.length)];
+
     var rand =
       arrGreatestAllTimes[
         Math.floor(Math.random() * arrGreatestAllTimes.length)
@@ -85,6 +119,8 @@ class PostList extends React.Component {
       arrGreatestAllTimes[
         Math.floor(Math.random() * arrGreatestAllTimes.length)
       ];
+
+    // let's verify movies are not constantly being repeated on the thumbs
     if (rand02 === rand || rand02 === rand03 || rand === rand03) {
       rand02 =
         arrGreatestAllTimes[
@@ -99,7 +135,7 @@ class PostList extends React.Component {
           Math.floor(Math.random() * arrGreatestAllTimes.length - 2)
         ];
     }
-    this.props.fetchPosts("8 Mile");
+    this.props.fetchPosts(randMainMovie);
     this.props.fetchMovieThumbs01(rand);
     this.props.fetchMovieThumbs02(rand02);
     this.props.fetchMovieThumbs03(rand03);
@@ -217,7 +253,7 @@ class PostList extends React.Component {
       <>
         <div className="card d-flex w-100 ">
           <div className="card-header lead text-uppercase bg-primary text-white">
-            Some of the Greatest Movies of All Time
+            Recommended: Some of the Greatest Movies of All Time
           </div>
           <div className="card-body">
             <div className="row">
@@ -225,15 +261,15 @@ class PostList extends React.Component {
                 <div className="card border border-success">
                   <img
                     className="card-img-top fade-in"
-                    src={this.props.thumbs.Poster}
-                    alt={this.props.thumbs.Title}
+                    src={this.props.movie_thumb_01.Poster}
+                    alt={this.props.movie_thumb_01.Title}
                   />
                   <div className="card-body">
                     <h5 className="card-title text-info">
-                      {this.props.thumbs.Title}
+                      {this.props.movie_thumb_01.Title}
                     </h5>
                     <p className="card-text text-muted">
-                      {this.props.thumbs.Plot}
+                      {this.props.movie_thumb_01.Plot}
                     </p>
                   </div>
                 </div>
@@ -243,15 +279,15 @@ class PostList extends React.Component {
                 <div className="card border border-success">
                   <img
                     className="card-img-top fade-in"
-                    src={this.props.thumbs02.Poster}
-                    alt={this.props.thumbs02.Title}
+                    src={this.props.movie_thumb_02.Poster}
+                    alt={this.props.movie_thumb_02.Title}
                   />
                   <div className="card-body">
                     <h5 className="card-title text-info">
-                      {this.props.thumbs02.Title}
+                      {this.props.movie_thumb_02.Title}
                     </h5>
                     <p className="card-text text-muted">
-                      {this.props.thumbs02.Plot}
+                      {this.props.movie_thumb_02.Plot}
                     </p>
                   </div>
                 </div>
@@ -261,15 +297,15 @@ class PostList extends React.Component {
                 <div className="card border border-success">
                   <img
                     className="card-img-top fade-in"
-                    src={this.props.thumbs03.Poster}
-                    alt={this.props.thumbs03.Title}
+                    src={this.props.movie_thumb_03.Poster}
+                    alt={this.props.movie_thumb_03.Title}
                   />
                   <div className="card-body">
                     <h5 className="card-title text-info">
-                      {this.props.thumbs03.Title}
+                      {this.props.movie_thumb_03.Title}
                     </h5>
                     <p className="card-text text-muted">
-                      {this.props.thumbs03.Plot}
+                      {this.props.movie_thumb_03.Plot}
                     </p>
                   </div>
                 </div>
@@ -302,9 +338,9 @@ class PostList extends React.Component {
 const mapStateToProps = state => {
   return {
     posts: state.posts,
-    thumbs: state.thumbs,
-    thumbs02: state.thumbs02,
-    thumbs03: state.thumbs03
+    movie_thumb_01: state.movie_thumb_01,
+    movie_thumb_02: state.movie_thumb_02,
+    movie_thumb_03: state.movie_thumb_03
   };
 };
 export default connect(mapStateToProps, {

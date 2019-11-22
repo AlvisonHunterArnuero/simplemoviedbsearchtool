@@ -6,7 +6,7 @@ import thumb03Reducer from "./thumb03Reducer";
 
 export default combineReducers({
   posts: postsReducer,
-  thumbs: thumb01Reducer,
-  thumbs02: thumb02Reducer,
-  thumbs03: thumb03Reducer
+  movie_thumb_01: thumb01Reducer,
+  movie_thumb_02: thumb02Reducer,
+  movie_thumb_03: thumb03Reducer
 });
